@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="768.0" minWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SimpleViewCtrl">
+	<children>
+      <SplitPane dividerPositions="0.75" layoutX="264.0" layoutY="94.0" orientation="VERTICAL" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="instrument" stylesheets="@./Interface.css">
+               <children>
+                  <SplitPane dividerPositions="0.5" layoutX="195.0" layoutY="110.0" orientation="VERTICAL" prefHeight="571.0" prefWidth="1022.0" styleClass="instrument" stylesheets="@./Interface.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="pane" stylesheets="@./Interface.css">
+                           <children>
+                              <SplitPane dividerPositions="0.7" layoutX="286.0" layoutY="76.0" prefHeight="281.0" prefWidth="1020.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="panehautgauche" stylesheets="@./Interface.css">
+                                       <children>
+                                          <Label layoutX="674.0" layoutY="259.0" text="OSC">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox layoutX="29.0" layoutY="111.0">
+                                             <children>
+                                                <Button fx:id="Sinus" layoutX="98.0" layoutY="99.0" mnemonicParsing="false" onAction="#setSinus" styleClass="bouton" stylesheets="@./Interface.css" text="Sinus" />
+                                                <Button fx:id="Triangle" layoutX="180.0" layoutY="86.0" mnemonicParsing="false" onAction="#setTriangle" text="Triangle" />
+                                                <Button fx:id="Rectangle" layoutX="234.0" layoutY="143.0" mnemonicParsing="false" onAction="#setSquare" text="Rectangle" />
+                                                <Button fx:id="Scie" layoutX="264.0" layoutY="86.0" mnemonicParsing="false" onAction="#setSaw" text="Scie" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="31.0" layoutY="231.0">
+                                             <children>
+                                                <Button fx:id="Sinus" layoutX="74.0" layoutY="177.0" mnemonicParsing="false" onAction="#setSinus2" text="Sinus" />
+                                                <Button fx:id="Triangle" layoutX="144.0" layoutY="177.0" mnemonicParsing="false" onAction="#setTriangle2" text="Triangle" />
+                                                <Button fx:id="Rectangle" layoutX="226.0" layoutY="191.0" mnemonicParsing="false" onAction="#setRectangle2" text="Rectangle" />
+                                                <Button fx:id="Scie" layoutX="325.0" layoutY="191.0" mnemonicParsing="false" onAction="#setSaw2" text="Scie" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="310.0" layoutY="126.0" spacing="70.0">
+                                             <children>
+                                                <Label layoutX="325.0" layoutY="116.0" text="Amp" />
+                                                <Label layoutX="397.0" layoutY="116.0" text="Coarse" />
+                                                <Label layoutX="476.0" layoutY="116.0" text="Fine" />
+                                                <Label layoutX="567.0" layoutY="116.0" text="Phase" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="321.0" layoutY="10.0" spacing="95.0">
+                                             <children>
+                                                <Slider fx:id="amp1" blockIncrement="0.1" layoutX="324.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" stylesheets="@./Interface.css">
+                                                   <cursor>
+                                                      <Cursor fx:constant="DEFAULT" />
+                                                   </cursor></Slider>
+                                                <Slider fx:id="co1" layoutX="347.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                <Slider fx:id="fi1" layoutX="372.0" layoutY="148.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                <Slider fx:id="pha1" layoutX="394.0" layoutY="149.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="322.0" layoutY="151.0" spacing="95.0">
+                                             <children>
+                                                <Slider fx:id="amp2" layoutX="324.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                <Slider fx:id="co2" layoutX="347.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                <Slider fx:id="fi2" layoutX="372.0" layoutY="148.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                <Slider fx:id="pha2" layoutX="394.0" layoutY="149.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                             </children>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="panehautdroite" stylesheets="@./Interface.css">
+                                       <children>
+                                          <Label layoutX="270.0" layoutY="257.0" text="LFO">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox layoutX="32.0" layoutY="225.0">
+                                             <children>
+                                                <Button fx:id="Sinus" layoutX="37.0" layoutY="197.0" mnemonicParsing="false" text="Sinus" />
+                                                <Button fx:id="Triangle" layoutX="117.0" layoutY="197.0" mnemonicParsing="false" text="Triangle" />
+                                                <Button fx:id="Rectangle" layoutX="121.0" layoutY="234.0" mnemonicParsing="false" text="Rectangle" />
+                                                <Button fx:id="Scie" layoutX="199.0" layoutY="197.0" mnemonicParsing="false" text="Scie" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="38.0" layoutY="128.0" spacing="65.0">
+                                             <children>
+                                                <Label layoutX="34.0" layoutY="131.0" text="Amp" />
+                                                <Label layoutX="134.0" layoutY="131.0" text="Freq" />
+                                                <Label layoutX="216.0" layoutY="131.0" text="Env" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="50.0" layoutY="10.0" spacing="80.0">
+                                             <children>
+                                                <Slider layoutX="347.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                                <Slider layoutX="372.0" layoutY="148.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                                <Slider layoutX="394.0" layoutY="149.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                             </children>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="pane" stylesheets="@./Interface.css">
+                           <children>
+                              <SplitPane dividerPositions="0.7" layoutX="179.0" layoutY="60.0" prefHeight="280.0" prefWidth="1020.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.6" layoutX="194.0" layoutY="59.0" prefHeight="278.0" prefWidth="709.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="panebasgauche" stylesheets="@./Interface.css">
+                                                   <children>
+                                                      <Label layoutX="388.0" layoutY="253.0" text="ENV">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox layoutX="35.0" layoutY="125.0" spacing="50.0">
+                                                         <children>
+                                                            <Label layoutX="38.0" layoutY="130.0" text="Attack" />
+                                                            <Label layoutX="138.0" layoutY="122.0" text="Sustain" />
+                                                            <Label layoutX="241.0" layoutY="122.0" text="Decay" />
+                                                            <Label layoutX="329.0" layoutY="122.0" text="Release" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="53.0" layoutY="8.0" spacing="83.0">
+                                                         <children>
+                                                            <Slider fx:id="att1" layoutX="324.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                            <Slider fx:id="sus1" layoutX="347.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                            <Slider fx:id="dec1" layoutX="372.0" layoutY="148.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                            <Slider fx:id="rel1" layoutX="394.0" layoutY="149.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="55.0" layoutY="151.0" spacing="83.0">
+                                                         <children>
+                                                            <Slider fx:id="att2" layoutX="324.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                            <Slider fx:id="sus2" layoutX="347.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                            <Slider fx:id="dec2" layoutX="372.0" layoutY="148.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                            <Slider fx:id="rel2" layoutX="394.0" layoutY="149.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" showTickLabels="true" showTickMarks="true" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="panebasmilieu" stylesheets="@./Interface.css">
+                                                   <children>
+                                                      <Label layoutX="246.0" layoutY="252.0" text="FLT">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox layoutX="51.0" layoutY="127.0" spacing="100.0">
+                                                         <children>
+                                                            <Label layoutX="65.0" layoutY="101.0" text="Freq" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="66.0" layoutY="10.0" spacing="120.0">
+                                                         <children>
+                                                            <Slider fx:id="filterFreq" layoutX="347.0" layoutY="147.0" max="20000.0" min="30.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                                            <Slider fx:id="filterRes" layoutX="372.0" layoutY="148.0" max="10.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Label layoutX="191.0" layoutY="128.0" text="Res" />
+                                                      <Button fx:id="highPass" layoutX="66.0" layoutY="195.0" mnemonicParsing="false" onAction="#setHighPass" text="High Pass" />
+                                                      <Button fx:id="lowPass" layoutX="151.0" layoutY="195.0" mnemonicParsing="false" onAction="#setLowPass" text="Low Pass" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="panebasdroite" stylesheets="@./Interface.css">
+                                       <children>
+                                          <Label layoutX="279.0" layoutY="253.0" text="FM">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox layoutX="28.0" layoutY="230.0">
+                                             <children>
+                                                <Button fx:id="Sinus" layoutX="36.0" layoutY="138.0" mnemonicParsing="false" text="Sinus" />
+                                                <Button fx:id="Triangle" layoutX="65.0" layoutY="209.0" mnemonicParsing="false" text="Triangle" />
+                                                <Button fx:id="Rectangle" layoutX="121.0" layoutY="162.0" mnemonicParsing="false" text="Rectangle" />
+                                                <Button fx:id="Scie" layoutX="147.0" layoutY="209.0" mnemonicParsing="false" text="Scie" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="64.0" layoutY="147.0" spacing="100.0">
+                                             <children>
+                                                <Label layoutX="59.0" layoutY="154.0" text="Amp" />
+                                                <Label layoutX="195.0" layoutY="154.0" text="Coarse" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="73.0" layoutY="22.0" spacing="120.0">
+                                             <children>
+                                                <Slider layoutX="347.0" layoutY="147.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                                <Slider layoutX="372.0" layoutY="148.0" orientation="VERTICAL" prefHeight="108.0" prefWidth="0.0" />
+                                             </children>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="1022.0" styleClass="piano" stylesheets="@./Interface.css">
+               <children>
+                  <Rectangle fx:id="C1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="34.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="D1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="80.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="E1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="126.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="F1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="172.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="G1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="218.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="A1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="264.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="G2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="540.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="C2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="356.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="F2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="494.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="B1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="310.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="E2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="448.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="D2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="402.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="A2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="586.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="D3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="724.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="B2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="632.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="F3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="816.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="C3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="678.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="E3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="770.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="A3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="908.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="B3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="954.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="G3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="168.0" layoutX="862.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="47.0" />
+                  <Rectangle fx:id="CSharp1" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="71.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="EFlat1" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="118.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="FSharp1" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="209.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="Gharp1" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="255.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="BFlat1" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="302.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="BFlat2" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="623.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="GSharp2" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="576.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="CSharp2" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="392.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="FSharp2" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="530.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="EFlat2" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="439.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="BFlat3" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="945.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="EFlat3" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="761.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="CSharp3" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="714.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="GSharp3" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="898.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+                  <Rectangle fx:id="FSharp3" arcHeight="5.0" arcWidth="5.0" height="114.0" layoutX="852.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="18.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,20 @@
+0?/03/2017
+
+TarsosDSP : installer l'api sur le projet
+	Regarder la doc du pack
+	Premiers tests
+
+Java Scene Builder 2.0 ï¿½ installer
+	Configurer
+	
+	
+14/03/2017
+
+http://www.softsynth.com/jsyn/docs/usersguide.php
+
+premier programme qui sort du son des enceinte (j'avoue, merci le dev guide!)
+
+à faire:
+Gen. d'enveloppe: lier aux sliders (créer des valeurs associées aux sliders [double] pour les param)
+Premier oscillateur: créer des UnitOscillator pour les formes d'onde + lier aux boutons, gérer les paramètres avec les sliders
+	

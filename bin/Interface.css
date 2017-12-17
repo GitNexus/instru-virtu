@@ -1,0 +1,80 @@
+.piano { 
+	-fx-background-image: url('piano.png');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+
+.instrument{
+	-fx-background-image: url('instrument.jpg');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+.pane {
+	-fx-background-color: transparent;
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+.panehautgauche{
+	-fx-background-image: url('panehautgauche2.png');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+.panehautdroite{
+	-fx-background-image: url('panehautdroit2.png');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+
+.panebasgauche{
+	-fx-background-image: url('panebasgauche.png');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+.panebasmilieu{
+	-fx-background-image: url('panebasmilieu.png');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+.panebasdroite{
+	-fx-background-image: url('panebasdroite2.png');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+}
+
+.button {
+	-fx-background-image: url('alu3.jpg');
+	-fx-background-position: left top, center;
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: cover, auto;
+	-fx-font: Calibri;
+    -fx-text-fill: rgb(230,230,230);
+}
+
+.slider{
+	-fx-show-tick-marks: true;
+	-fx-blend-mode: blue;
+}
+
+.label{
+	-fx-font-size: 15px;
+	-fx-text-fill: white;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 0;
+}
